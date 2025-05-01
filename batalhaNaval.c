@@ -26,6 +26,17 @@ int main() {
         tabuleiro[linha2 + i][coluna2] = navio2[i];
     }
 
+    int linha3 = 6, coluna3 = 1;
+    for (int i = 0; i < TAM_NAVIO; i++) {
+        tabuleiro[linha3 + i][coluna3 + i] = 3;
+    }
+
+    // 5. Navio diagonal secundária (invertida)
+    int linha4 = 1, coluna4 = 8;
+    for (int i = 0; i < TAM_NAVIO; i++) {
+        tabuleiro[linha4 + i][coluna4 - i] = 3;
+    }
+
     // 3. Exibe o tabuleiro
     printf("   ");
     for (int j = 1; j <= TAM; j++) {
